@@ -12,7 +12,7 @@ public class P {
 			Registry registry = LocateRegistry.getRegistry(host);
 			IServer stub = (IServer) registry.lookup("server");
 			if (stub != null) {
-				Process p = new Process();
+				Processo p = new Processo();
 				stub.register(p);
 				p.start();
 			}
