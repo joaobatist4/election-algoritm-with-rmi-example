@@ -3,7 +3,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class HelloServer {
+public class ServerMain {
 
 	public static void main(String args[]) throws RemoteException {
 		Server obj = new Server();

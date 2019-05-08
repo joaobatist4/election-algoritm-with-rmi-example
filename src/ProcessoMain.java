@@ -1,9 +1,9 @@
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-public class P {
+public class ProcessoMain {
 
-	public P() {
+	public ProcessoMain() {
 		// TODO Auto-generated constructor stub
 	}
 	public static void main(String[] args) {

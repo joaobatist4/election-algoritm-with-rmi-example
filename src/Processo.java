@@ -45,9 +45,9 @@ public class Processo extends Thread implements IProcess, Serializable {
 		// setar o lider
 		this.setLeader(p);
 		if(getPID() != maxPID)
-		System.out.println("Novo lider eh.: " + maxPID);
+			System.out.println("Novo lider eh.: " + maxPID);
 		else
-			System.out.println("Eu sou o novo lider dessa P@@@@ Toda");
+			System.out.println("Eu sou o novo lider. Processo " + this.getPID());
 		// Zerar comparador
 		maxPID = 0;
 	}
@@ -82,7 +82,7 @@ public class Processo extends Thread implements IProcess, Serializable {
 					if (getPID() != leader.getPID())
 						System.out.println("O processo " + this.getPID() + " encontrou o leader " + leader.getPID());
 					else
-						System.out.println("Eu sou o lider dessa P@@@ Toda");
+						System.out.println("Eu sou o lider. Processo " + this.getPID());
 				} else {
 					removeLeader();
 					leader = null;
@@ -130,7 +130,7 @@ public class Processo extends Thread implements IProcess, Serializable {
 	boolean isProcessIdRunning(String pid, String command) {
 		try {
 			Runtime rt = Runtime.getRuntime();
-			Process pr = rt.exec(command);
+			java.lang.Process pr = rt.exec(command);
 
 			InputStreamReader isReader = new InputStreamReader(pr.getInputStream());
 			BufferedReader bReader = new BufferedReader(isReader);
